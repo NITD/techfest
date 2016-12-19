@@ -96,8 +96,8 @@ body {
     position: absolute;
     opacity: 0.2;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, .4);
-    box-shadow: 0 0 10px rgba(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, .5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .5);
     -webkit-filter: blur( 10px );
             filter: blur( 10px );
 }
