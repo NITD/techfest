@@ -6,7 +6,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    font: 700 12px/18px 'Montserrat', Helvetica, Arial, sans-serif;
+    font: 300 12px/18px 'Source Code Pro', 'Consolas', 'Monaco', monospace;
     color: #ccc;
 }
 
@@ -160,8 +160,11 @@ body {
 `----------------------------------------------------------------*/
 
 .logo {
+    font-size: .6rem;
     line-height: 1.5;
     text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Montserrat';
 }
 .logo div:first-child {
     font-size: .9em;
@@ -180,4 +183,14 @@ body {
     letter-spacing: 1em;
     margin-right: 0em;
     padding-left: 1em;
+}
+@media all and (min-width: 500px) {
+    .logo {
+        font-size: .75rem;
+    }
+}
+@media all and (min-width: 700px) {
+    .logo {
+        font-size: 1rem;
+    }
 }
