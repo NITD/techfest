@@ -6,7 +6,68 @@ html,
 body {
     width: 100%;
     height: 100%;
-    font: 400 12px/18px 'Source Code Pro', 'Consolas', 'Monaco', monospace;
+    font: 700 12px/18px 'Montserrat', Helvetica, Arial, sans-serif;
+    color: #ccc;
+}
+
+/*----------------------------------------------------------------.
+|                            Typography                           |
+`----------------------------------------------------------------*/
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.strike span {
+    position: relative;
+    display: inline-block;
+}
+.strike span:before,
+.strike span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: #ccc;
+}
+.strike span:before {
+    right: 100%;
+    margin-right: 35px;
+}
+.strike span:after {
+    left: 100%;
+    margin-left: 35px;
+}
+
+/*----------------------------------------------------------------.
+|                            Centering                            |
+`----------------------------------------------------------------*/
+
+.h-center-wrap {
+    text-align: center;
+}
+.h-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.v-center-wrap {
+    font-size: 0;
+}
+.v-center-wrap:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.v-center-box {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    max-width: 100%;
 }
 
 /*----------------------------------------------------------------.
@@ -92,4 +153,31 @@ body {
     .circle-3 { width: 300px; height: 300px;    top: 40%;  left: 30%; }
     .circle-4 { width: 400px; height: 400px; bottom: 10%;  left: 10%; }
     .circle-7 { width: 250px; height: 250px;    top: 10%;  left: 35%; }
+}
+
+/*----------------------------------------------------------------.
+|                              Home                               |
+`----------------------------------------------------------------*/
+
+.logo {
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+.logo div:first-child {
+    font-size: .9em;
+    letter-spacing: 1.5em;
+    padding-left: 1.5em;
+}
+.logo h1 {
+    font-size: 3em;
+    letter-spacing: .2em;
+    padding-left: .2em;
+    line-height: 2.25;
+    font-weight: 200;
+}
+.logo .year {
+    font-size: 1.2em;
+    letter-spacing: 1em;
+    margin-right: 0em;
+    padding-left: 1em;
 }
