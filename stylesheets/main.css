@@ -12,6 +12,14 @@ body {
 
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.blur {
+    -webkit-filter: blur( 50px );
+            filter: blur( 50px );
+    transition: all 500ms ease-in-out;
 }
 
 /*----------------------------------------------------------------.
@@ -45,6 +53,38 @@ ul {
 li {
     font-size: 1.2em;
     line-height: 1.5;
+}
+
+blockquote {
+    font-size: 2em;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    line-height: 1.4;
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.alt-font {
+    font-family: 'Montserrat';
+    font-weight: 200;
+}
+.alt-font p {
+    letter-spacing: .1em;
+    line-height: 2;
+}
+
+.caps {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding-left: .1em;
 }
 
 .strike {
@@ -112,6 +152,30 @@ li {
     height: 100%;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 500ms ease-in-out;
+}
+.overlay-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.container {
+    max-width: 60rem;
+    padding: 2rem;
+}
+@media all and (min-width: 700px) {
+    .container {
+        padding: 5rem;
+    }
+}
+
 /*----------------------------------------------------------------.
 |                            Clearfix                             |
 `----------------------------------------------------------------*/
@@ -176,6 +240,17 @@ li {
 .btn-cta:active {
     background-color: black;
     color: white;
+}
+
+.menu-btn {
+    font-size: 1rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: 200;
 }
 
 /*----------------------------------------------------------------.
@@ -292,6 +367,33 @@ li {
     .logo {
         font-size: 1rem;
     }
+}
+
+/*----------------------------------------------------------------.
+|                            Navigation                           |
+`----------------------------------------------------------------*/
+
+.primary-nav {
+    font-family: 'Montserrat';
+    font-weight: 200;
+    text-transform: uppercase;
+    overflow: auto;
+}
+.primary-nav ul {
+    list-style-type: none;
+}
+.primary-nav li {
+    letter-spacing: .2em;
+    padding-left: .2em;
+    line-height: 5em;
+    font-size: 1.5em;   
+}
+.primary-nav small {
+    font-size: 1rem;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
 }
 
 /*----------------------------------------------------------------.
