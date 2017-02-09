@@ -1,0 +1,386 @@
+/*----------------------------------------------------------------.
+|                       General Styles                            |
+`----------------------------------------------------------------*/
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font: 200 12px/18px 'Montserrat';
+}
+
+*::-webkit-scrollbar {
+    width: 9px;
+}
+*::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+*::-webkit-scrollbar-thumb {
+    border: 3px solid #bbb;
+}
+
+/*----------------------------------------------------------------.
+|                            Typography                           |
+`----------------------------------------------------------------*/
+
+h1,
+h2 {
+	font-size: 3em;
+	font-weight: 700;
+	line-height: 1.1;
+	margin-bottom: 1em;
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+h3 {
+	font-size: 2em;
+	line-height: 1.1;
+	font-weight: 700;
+	margin: 1em 0;
+}
+
+p, ul {
+	font-family: 'Source Sans Pro';
+	font-size: 1.5em;
+	line-height: 1.5;
+	letter-spacing: .05em;
+	margin-bottom: 1em;
+}
+ul {
+	list-style-type: circle;
+}
+p:last-child,
+ul:last-child {
+	margin-bottom: 0;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.strike span {
+    position: relative;
+    display: inline-block;
+}
+.strike span:before,
+.strike span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background-color: black;
+}
+.strike span:before {
+    right: 100%;
+    margin-right: 35px;
+}
+.strike span:after {
+    left: 100%;
+    margin-left: 35px;
+}
+
+/*----------------------------------------------------------------.
+|                            Centering                            |
+`----------------------------------------------------------------*/
+
+.h-center-wrap {
+    text-align: center;
+}
+.h-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.v-center-wrap {
+    font-size: 0;
+}
+.v-center-wrap:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.v-center-box {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+/*----------------------------------------------------------------.
+|                             Pages                               |
+`----------------------------------------------------------------*/
+
+.full-page {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: white;
+    pointer-events: none;
+    transition: all 500ms ease-in-out;
+    z-index: 1000;
+}
+.overlay-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.container {
+    max-width: 40rem;
+    max-height: 100%;
+    padding: 4rem 3em;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*----------------------------------------------------------------.
+|                            Clearfix                             |
+`----------------------------------------------------------------*/
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*----------------------------------------------------------------.
+|                        Icons and Images                         |
+`----------------------------------------------------------------*/
+
+.icon {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------------------.
+|                              Home                               |
+`----------------------------------------------------------------*/
+
+.logo {
+    font-size: .6rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.logo div:first-child {
+    font-size: .9em;
+    letter-spacing: 1.5em;
+    padding-left: 1.5em;
+}
+.logo h1 {
+    font-size: 3em;
+    letter-spacing: .2em;
+    padding-left: .2em;
+    line-height: 2.25;
+    font-weight: 200;
+}
+.logo .year {
+    font-size: 1.2em;
+    letter-spacing: 1em;
+    margin-right: 0em;
+    padding-left: 1em;
+}
+@media all and (min-width: 500px) {
+    .logo {
+        font-size: .75rem;
+    }
+}
+@media all and (min-width: 700px) {
+    .logo {
+        font-size: 1rem;
+    }
+}
+
+/*----------------------------------------------------------------.
+|                           Navigation                            |
+`----------------------------------------------------------------*/
+
+.primary-nav {
+    padding: 1rem;
+}
+.nav-wrap {
+    border: 1px solid black;
+    border-radius: .5rem;
+    overflow: auto;
+    padding: 1rem;
+}
+.primary-nav ul {
+    list-style-type: none;
+}
+.primary-nav li {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 4;
+    letter-spacing: .3em;
+    padding-left: .3em;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------------------.
+|                              Event                              |
+`----------------------------------------------------------------*/
+
+.event-details-wrap {
+    padding: 4rem 3rem 8rem 3rem;
+    max-width: 35rem;
+    max-height: 100%;
+    overflow: auto;
+}
+.event-details {
+    position: relative;
+    float: right;
+    height: 100%;
+    border-left: 1px solid black;
+}
+.event-details,
+.register-btn {
+    width: 100%;
+}
+.register-btn {
+    position: fixed;
+    bottom: 0;
+    line-height: 4rem;
+    background-color: white;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding-left: .2em;
+    cursor: pointer;
+    border: 1px solid black;
+    border-left: 0;
+}
+.register-btn:active,
+.register-btn-registered {
+    background-color: black;
+    color: white;
+}
+.event-image-wrap {
+    padding-right: 25%;
+    height: 100%;
+    display: none;
+}
+.event-image {
+    height: 100%;
+}
+@media all and (min-width: 600px) {
+    .event-image-wrap {
+        display: block;
+        padding-right: 50%;
+    }
+    .event-details,
+    .register-btn {
+        width: 50%;
+    }
+}
+@media all and (min-width: 900px) {
+    .event-image-wrap {
+        padding-right: 30rem;
+    }
+    .event-details,
+    .register-btn {
+        width: 30rem;
+    }
+}
+
+/*----------------------------------------------------------------.
+|                           Background                            |
+`----------------------------------------------------------------*/
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    overflow: hidden;
+}
+
+.bg-wrap {
+	padding: 1rem;
+	position: absolute;
+	z-index: -1000;
+}
+.bg {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+.circle {
+    position: absolute;
+    opacity: .5;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.circle-hide-1,
+.circle-hide-2 { display: hidden; }
+.circle-1 {
+    width: 200px; height: 200px; top: 10%; left: 10%;
+    -webkit-animation: motion-1 10s infinite alternate-reverse;
+            animation: motion-1 10s infinite alternate-reverse;
+}
+.circle-2 { 
+    width: 100px; height: 100px; top: 30%; right: 10%;
+    -webkit-animation: motion-1 10s infinite normal;
+            animation: motion-1 10s infinite normal;
+}
+.circle-3{
+    width: 150px; height: 150px; top: 40%; left: 30%;
+    -webkit-animation: motion-2 10s infinite normal;
+            animation: motion-2 10s infinite normal;
+}
+.circle-4 {
+    width: 250px; height: 250px; bottom: 10%;  left: 10%;
+    -webkit-animation: motion-1 10s infinite reverse;
+            animation: motion-1 10s infinite reverse;
+}
+.circle-5 {
+    width: 100px; height: 100px; bottom: 20%; right: 20%;
+    -webkit-animation: motion-2 10s infinite reverse;
+            animation: motion-2 10s infinite reverse;
+}
+@media all and (min-width: 700px) {
+    .circle-hide-1 { display: block; }
+    .circle-2 { width: 200px; height: 200px; top: 30%; right: 10%; }
+    .circle-6 {
+        width: 150px; height: 150px; bottom: 50%; right: 30%;
+        -webkit-animation: motion-1 10s infinite alternate;
+                animation: motion-1 10s infinite alternate;
+    }
+}
+@media all and (min-width: 1000px) {
+    .circle-hide-2 { display: block; }
+    .circle-3 { width: 200px; height: 200px;    top: 40%;  left: 30%; }
+    .circle-4 { width: 350px; height: 350px; bottom: 10%;  left: 10%; }
+    .circle-5 { width: 300px; height: 300px; bottom: 10%; right: 20%; }
+    .circle-7 {
+        width: 200px; height: 200px; top: 10%; left: 35%;
+        -webkit-animation: motion-2 10s infinite alternate;
+                animation: motion-2 10s infinite alternate;
+    }
+}
+@media all and (min-width: 1300px) {
+    .circle-2 { width: 350px; height: 350px;    top: 20%; right: 10%; }
+    .circle-3 { width: 300px; height: 300px;    top: 40%;  left: 30%; }
+    .circle-4 { width: 400px; height: 400px; bottom: 10%;  left: 10%; }
+    .circle-7 { width: 250px; height: 250px;    top: 10%;  left: 35%; }
+}
